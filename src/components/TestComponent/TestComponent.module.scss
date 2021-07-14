@@ -1,0 +1,49 @@
+$bkgColor: lightGray;
+$borderColor: grey;
+$textColor: rgb(68, 68, 68);
+$borderWidth: 1px;
+$margin: 10px;
+
+.border {
+  border: $borderWidth solid $borderColor;
+  border-radius: 2px;
+  color: $textColor;
+}
+
+.testComponent {
+  width: fit-content;
+  background-color: $bkgColor;
+  box-shadow: 0px 0px 5px 1px $textColor;
+  margin: $margin;
+  @extend .border;
+
+  .inputTxt {
+    outline: none;
+    @extend .border;
+  }
+
+  .inputTxtError {
+    border-color: red;
+  }
+
+  .submitButton {
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    @extend .border;
+  }
+
+  .formLine {
+    margin: $margin;
+  }
+
+  .labelTxt {
+    display: inline-block;
+    width: 100px;
+  }
+  .legend {
+    font-size: 10px;
+    margin: 10px 15px;
+    text-align: center;
+  }
+}
